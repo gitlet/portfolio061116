@@ -1,0 +1,198 @@
+// [IMPORTING BOURBON]
+@import "bourbon/bourbon"
+// [INIITAL RESET] 
+*
+  margin: auto
+  padding: 0
+// [DECLARING SASS VARIABLES]
+$aclr: honeydew
+$tdeco: none
+// [SETTING GLOBAL FONT-FAMILY]
+body
+  font-family: 'Josefin Slab', serif
+  header
+    position: absolute
+    top: -96px
+    left: 0
+    right: 0
+    // background: #032c40
+    background: #2977a5
+    .menu
+      .menu-list
+        list-style-type: none
+        text-align: center
+        li
+          display: inline-block
+          padding: 40px
+          font-weight: bold
+          a
+            text-decoration: $tdeco
+            color: $aclr
+        li:hover
+          background: rgba(0, 0, 0, 0.37)
+          transition: background ease 1s
+  .hero-unit
+    position: relative
+    top: 0px
+    // background: tint(crimson, 40%)
+    // background: #070b19
+    background: #f1f1f1
+    @include size(auto 240px)
+    h1
+      position: absolute
+      top: 40px
+      left: 40px
+      // color: $aclr
+      // color: #3cddfb
+      color: #153844
+      // background: tint(crimson, 60%)
+      // background: #0f1a2f
+      border: 2px solid #1fd23f
+      padding: 15px 20px 10px 20px
+      border-radius: 5px
+    h1:hover
+      background: #153844
+      color: #1fd23f
+      border: 2px solid #153844
+      transition: background ease 1s
+    .handle-pull-right
+      list-style-type: none
+      position: absolute
+      top: 40px
+      right: 40px
+      cursor: pointer
+      div
+        // background: #580818
+        // background: #52d5ea
+        background: #969fa0
+        height: 3px
+        width: 36px
+        margin: 3px
+        border-radius: 6px
+
+  .container
+    position: relative
+    top: 0
+    // border: 1px solid
+    @include size(auto)
+    text-align: center
+    margin: 20px 0 10px 0
+    article
+      display: inline-block
+      @include size(200px auto)
+      // margin: 5px
+      padding: 5px
+      // text-align: justify
+      .article-list
+        list-style-type: none
+        text-align: center
+        li
+          display: inline-block
+          color: gray
+          font-size: 44px
+          img
+            @include size(90px)
+            border-radius: 100%
+          p
+            text-align: justify
+            font-family: 'Varela Round', sans-serif
+            color: gray
+            font-size: 15px
+            font-weight: normal
+          a
+            text-decoration: $tdeco
+            color: #2367a9
+            border: 2px solid #2367a9
+            padding: 10px 20px
+            border-radius: 5px
+            position: relative
+            top: 40px
+            font-weight: bold
+            font-size: 15px
+            font-family: 'Varela Round', sans-serif
+          a:hover
+            background: #2367a9
+            color: honeydew
+            transition: color cubic-bezier(0, -0.43, 0.95, 1.36) 1s
+        h3
+          color: gray
+          padding: 15px 0 15px 0px
+
+  .twitter-feeds
+    position: relative
+    top: 90px
+    @include size(auto 240px)
+    // box-shadow: 0 0 5px #2367a9
+    // border-bottom: 2px solid #2367a9
+    // margin-bottom: 1px
+    margin: 5px
+    border-radius: 5px
+    background: #16a05a
+
+  footer
+    position: relative
+    top: 90px
+    // background: #2367a9
+    background: #233d56
+    @include size(auto 240px)
+    .footer-list
+      list-style-type: none
+      li
+        display: inline-block
+        // float: left
+        @include size(23% auto)
+        // border: 1px solid #fff
+        padding: 10px
+        p
+          text-decoration: $tdeco
+          color: $aclr
+          text-align: justify
+          padding: 5px
+          a
+            text-decoration: $tdeco
+            color: $aclr
+        .socmed
+          list-style-type: none
+          > li
+            display: inline-block
+            a
+              text-decoration: $tdeco
+              color: $aclr
+      > li:nth-child(odd)
+        background: rgba(28, 48, 93, 0.38)
+      > li:nth-child(even)
+        background: rgba(5, 9, 10, 0.48)
+      > li:nth-child(4n)
+        position: absolute
+        right: 0
+        width: 5%
+        height: 220px
+        p
+          text-align: center
+          font-size: 36px
+          a
+            color: #17e677
+
+      // > li:nth-child(2n)
+      //   @include size(15% auto)
+      //   font-weight: bold
+      //   p a
+      //     color: $aclr
+      //     text-decoration: $tdeco
+      // > li:nth-child(4n)
+      //   @include size(5% auto)
+      //   text-align: center
+      //   font-size: 42px
+      //   a
+      //     text-decoration: $tdeco
+      //     color: rgba(9, 24, 49, 0.21)
+
+.fixed
+  position: relative
+  top: 96px
+  transition: top cubic-bezier(0.1, -0.32, 1, 1.4) .5s
+  // overflow-y: hidden
+.toggled
+  top: 0px
+  transition: top cubic-bezier(0.1, -0.32, 1, 1.4) .5s
+  // overflow-y: hidden
